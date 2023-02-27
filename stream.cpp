@@ -37,6 +37,8 @@ void create_file(std::string filename) {
 		std::cout << "File \"" << filename << "\" was successfully created\n\n";
 	}
 
+	std::cout << "Enter text. Type \"cocojambo\" on new line to stop.\n\n";
+
 	//¬веденн€ даних в файл
 	std::string temp;
 	while (true) {
@@ -77,6 +79,9 @@ std::string* get_data(std::string text, int rows) {
 	std::string temp;
 	std::stringstream ss;
 	ss << text;
+
+	std::cout << "\nSentences in file:\n\n";
+
 	for (int i = 0; i < rows; i++) {
 		std::getline(ss, temp, '.');
 		if (i != 0) temp.erase(temp.begin());
